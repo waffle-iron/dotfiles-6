@@ -4,6 +4,7 @@
 
 !/dotfiles-example
 !/dotbot
+!install.conf.yaml
 
 # Don't include files with sensitive data
 /.zshrc-secrets
