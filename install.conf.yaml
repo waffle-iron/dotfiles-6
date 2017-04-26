@@ -4,5 +4,6 @@
 - link:
     ~/.dotfiles:         dotfiles-example/
     ~/.i3:         .i3/
+    ~/.confg:         config/
 - shell:
     - ./.dotfiles/script/bootstrap
