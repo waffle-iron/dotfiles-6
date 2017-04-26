@@ -1,5 +1,4 @@
-
- - clean: ['~', '~/.config']
+- clean: ['~', '~/.config']
 - shell:
     - mkdir -p ~/.config
 - link:
@@ -29,4 +28,6 @@
     ~/.config/systemd:   config/systemd/
     ~/.config/termite:   config/termite/
 - shell:
-    - git subup
+    - git clone https://github.com/insuusvenerati/dotfiles-example ~/.dotfiles
+    - cd ~/.dotfiles
+    - ./script/bootstrap
