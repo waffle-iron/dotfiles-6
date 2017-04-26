@@ -7,4 +7,4 @@
     ~/.config:         config/
     ~/scripts:         scripts/
 - shell:
-    - ~/.dotfiles/script/bootstrap
+    - ~./.dotfiles/script/bootstrap
