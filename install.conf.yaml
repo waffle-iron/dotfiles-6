@@ -1,6 +1,4 @@
 - clean: ['~', '~/.config']
-- shell:
-    - mkdir -p ~/.config
 - link:
     ~/.dotfiles:         dotfiles-example/
     ~/.i3:         .i3/
