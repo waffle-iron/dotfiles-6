@@ -1,0 +1,3 @@
+[submodule "dotfiles-example"]
+	path = dotfiles-example
+	url = https://github.com/insuusvenerati/dotfiles-example

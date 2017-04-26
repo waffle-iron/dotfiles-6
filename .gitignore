@@ -2,6 +2,8 @@
 /[^.]*
 !/bin
 
+!/dotfiles-example
+
 # Don't include files with sensitive data
 /.zshrc-secrets
 
