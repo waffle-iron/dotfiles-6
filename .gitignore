@@ -6,6 +6,7 @@
 !/dotbot
 !install.conf.yaml
 !install
+!/config
 
 # Don't include files with sensitive data
 /.zshrc-secrets
@@ -142,4 +143,3 @@ Templates
 Powerline_*.cache
 
 # Postgres stuff
-
