@@ -7,6 +7,7 @@
 !install.conf.yaml
 !install
 !/config
+!/scripts
 
 # Don't include files with sensitive data
 /.zshrc-secrets
