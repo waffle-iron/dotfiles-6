@@ -8,6 +8,7 @@
 !install
 !/config
 !/scripts
+!/dotbot-yaourt
 
 # Don't include files with sensitive data
 /.zshrc-secrets

@@ -6,11 +6,7 @@
     ~/scripts:         scripts/
     ~/.weechat:         .weechat/
 - shell:
+   - cd
     - ~./.dotfiles/script/bootstrap
-    - sudo pacman -Syyu
-    - sudo pacman -Syy kernel26-headers file base-devel abs
-    - wget https://aur.archlinux.org/cgit/aur.git/snapshot/aura-bin.tar.gz
-    - tar xvzf aura-bin.tar.gz
-    - cd aura-bin
-    - makepkg -s
-    - sudo pacman -U aura-bin-*.pkg.tar
+- shell:
+    -
