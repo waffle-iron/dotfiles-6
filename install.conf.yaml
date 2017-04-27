@@ -1,4 +1,3 @@
-- clean: ['~', '~/.config']
 - link:
     ~/.dotfiles:         dotfiles-example/
     ~/.i3:         .i3/
