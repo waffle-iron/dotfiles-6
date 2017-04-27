@@ -6,7 +6,7 @@
     ~/.i3:         .i3/
     ~/config:
       force: true
-      path: .config
+      path: ~/.config
     ~/scripts:         scripts/
     ~/.weechat:         .weechat/
 - shell:
