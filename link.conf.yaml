@@ -6,3 +6,4 @@
       path: config
     ~/scripts:         scripts/
     ~/.weechat:         .weechat/
+    ~/.gitconfig:  git/gitconfig

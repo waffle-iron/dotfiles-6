@@ -2,6 +2,7 @@
 /[^.]*
 !/bin
 
+!/git
 !/dotbot-pacaur
 !/dotfiles-example
 !/dotbot
