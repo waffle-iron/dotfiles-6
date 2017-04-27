@@ -1,11 +1,11 @@
 - pacaur:
   - atom-editor-bin
-  - tmux
   - gitkraken
-  - neovim
   - zsh
   - i3-gaps
   - atom-editor-bin
   - weechat-git
   - compton
   - redshift
+  - i3blocks-gaps-git
+  - i3status
