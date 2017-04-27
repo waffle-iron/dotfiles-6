@@ -6,4 +6,11 @@
     ~/scripts:         scripts/
     ~/.weechat:         .weechat/
 - shell:
-    - ~./.dotfiles/script/bootstrap
+  -
+    description: "Bootstrap shell"
+    command: "../.dotfiles/script/bootstrap"
+    stdout: true
+    stderr: true
+    stdin: true
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
