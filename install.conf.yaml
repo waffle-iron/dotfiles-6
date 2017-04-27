@@ -1,3 +1,4 @@
+- clean: ['~', '~/.config']
 - link:
     ~/.dotfiles:         dotfiles-example/
     ~/.i3:         .i3/
@@ -5,4 +6,4 @@
     ~/scripts:         scripts/
     ~/.weechat:         .weechat/
 - shell:
-    - sh ~./.dotfiles/script/bootstrap
+    - ~./.dotfiles/script/bootstrap
