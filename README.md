@@ -1,7 +1,7 @@
-# dotfiles
+# Installing dotfiles
 
 ```console
-git clone https://git.io/v9GrX
+git clone https://github.com/insuusvenerati/dotfiles
 ```
 
 ```console
