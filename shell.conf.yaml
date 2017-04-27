@@ -1,0 +1,7 @@
+- shell:
+  -
+    description: "Bootstrap shell by carl0s"
+    command: "../.dotfiles/script/bootstrap"
+    stdout: true
+    stderr: true
+    stdin: true

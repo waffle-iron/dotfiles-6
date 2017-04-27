@@ -4,12 +4,11 @@
 
 !/dotfiles-example
 !/dotbot
-!install.conf.yaml
 !install
 !/config
 !/scripts
 !/dotbot-yaourt
-!packages.conf.yaml
+!*.conf.yaml
 
 # Don't include files with sensitive data
 /.zshrc-secrets
