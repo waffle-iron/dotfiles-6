@@ -1,6 +1,7 @@
 - clean: ['~', '~/.config']
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
+    - mkdir ~/.config
 - link:
     ~/.dotfiles:         dotfiles-example/
     ~/.i3:         .i3/
