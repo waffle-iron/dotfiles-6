@@ -7,5 +7,3 @@
 - shell:
    - cd
     - ~./.dotfiles/script/bootstrap
-- shell:
-    -
