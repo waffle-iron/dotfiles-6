@@ -1,4 +1,6 @@
 - clean: ['~', '~/.config']
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
 - link:
     ~/.dotfiles:         dotfiles-example/
     ~/.i3:         .i3/
@@ -10,9 +12,7 @@
 - shell:
   -
     description: "Bootstrap shell"
-    command: "./.dotfiles/script/bootstrap"
+    command: "../.dotfiles/script/bootstrap"
     stdout: true
     stderr: true
     stdin: true
-- shell:
-    - [git submodule update --init --recursive, Installing submodules]
