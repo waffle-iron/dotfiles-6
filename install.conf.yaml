@@ -12,7 +12,7 @@
 - shell:
   -
     description: "Bootstrap shell"
-    command: "../.dotfiles/script/bootstrap.sh"
+    command: "../.dotfiles/script/bootstrap"
     stdout: true
     stderr: true
     stdin: true
