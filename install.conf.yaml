@@ -5,10 +5,9 @@
 - link:
     ~/.dotfiles:         dotfiles-example/
     ~/.i3:         .i3/
-    ~/config:
-      create: true
+    ~/.config:
       force: true
-      path: ~/.config
+      path: config
     ~/scripts:         scripts/
     ~/.weechat:         .weechat/
 - shell:
