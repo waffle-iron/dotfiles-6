@@ -2,6 +2,7 @@
 /[^.]*
 !/bin
 
+!/dotbot-pacaur
 !/dotfiles-example
 !/dotbot
 !install
