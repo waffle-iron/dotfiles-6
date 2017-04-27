@@ -5,5 +5,4 @@
     ~/scripts:         scripts/
     ~/.weechat:         .weechat/
 - shell:
-   - cd
     - ~./.dotfiles/script/bootstrap
