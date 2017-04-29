@@ -1,7 +1,7 @@
 - shell:
   -
     description: "Installing powerpill for faster downloads"
-    command: "sudo pacman -S powerpill"
+    command: "sudo pacman -S --noconfirm powerpill"
 - shell:
   -
     description: "Bootstrap shell by carl0s"
