@@ -1,5 +1,9 @@
 - shell:
   -
+    description: "Installing powerpill for faster downloads"
+    command: "sudo pacman -S powerpill"
+- shell:
+  -
     description: "Bootstrap shell by carl0s"
     command: "../.dotfiles/script/bootstrap"
     stdout: true

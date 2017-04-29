@@ -5,5 +5,5 @@
       force: true
       path: config
     ~/scripts:         scripts/
-    ~/.weechat:         .weechat/
     ~/.gitconfig:  git/gitconfig
+    ~/.i3blocks.conf: .i3blocks.conf
