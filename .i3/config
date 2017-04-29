@@ -26,6 +26,10 @@ set_from_resource $cyan        color14 #000000
 set_from_resource $darkwhite   color7  #000000
 set_from_resource $white       color15 #000000
 
+set $black       #282828
+set $darkblack   #1d2021
+set $transparent #282828
+
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
@@ -43,12 +47,37 @@ font pango:DejaVu Sans Mono 8, FontAwesome 12
 floating_modifier $mod
 
 # Start more windows floating.
-for_window [window_role="pop-up"] floating enable
-for_window [window_role="task_dialog"] floating enable
+for_window [class="Thunderbird" title="Earlybird Preferences"] floating enable
+for_window [class="Thunderbird" title="New Event: New Event"] floating enable
 
+#for_window [class=(?i)termite] border pixel 3
+
+for_window [window_role="pop-up"] floating enable
+for_window [window_role="bubble"] floating enable
+for_window [window_role="task_dialog"] floating enable
+for_window [window_role="Preferences"] floating enable
+
+for_window [window_type="dialog"] floating enable
+for_window [window_type="menu"] floating enable
+
+for_window [class="(?i)gsimplecal"] floating enable, move position mouse, move down $height px
+for_window [class="(?i)qemu-system"] floating enable
+for_window [class="(?i)VirtualBox" title="(?i)Manager"] floating enable
+for_window [class="(?i)VirtualBox"] floating enable
+for_window [class="(?i)blueman"] floating enable
+
+#for_window [instance="sun-awt-X11-XFramePeer"] floating enable
+for_window [instance="__scratchpad"] floating enable
+for_window [instance="__nmtui"] floating enable
+for_window [class="(?i)recordmydesktop"] floating enable
+
+for_window [class="(?i)pavucontrol"] floating enable, move position mouse
+for_window [class="(?i)pavucontrol" instance="pavucontrol-bar"] move down $height px
 
 # start a terminal
 bindsym $mod+Return exec termite -d $(xcwd)
+
+focus_follows_mouse no
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -144,11 +173,8 @@ workspace "6:  " output HDMI-0
 
 #for_window [class="(?i)discord"] floating enable
 
-#assign [class="(?i)discord" window_type="splash"] "1:  "
-#assign [class="(?i)discord" window_type="normal"] "1:  "
-
-
-assign [class="(?i)nylas mail"] "3:  "
+assign [class="(?i)discord" window_type="splash"] "4:  "
+assign [class="(?i)discord" window_type="normal"] "4:  "
 
 
 # switch to workspace
@@ -216,11 +242,11 @@ bar {
     i3bar_command i3bar -t
     position top
     font pango:Hack, FontAwesome 11
-    strip_workspace_numbers yes
+    strip_workspace_numbers no
     separator_symbol "■"
     bindsym button4 nop
     bindsym button5 nop
-    tray_output none
+    tray_output HDMI-0
     #tray_output none
     tray_padding 0
     height 34
@@ -241,6 +267,7 @@ bar {
 
 
 # Start background processes.
+exec /usr/lib/gnome-settings-daemon
 exec --no-startup-id nm-applet
 exec --no-startup-id gnome-keyring-daemon --start --components=pkcs11,secrets,ssh
 exec --no-startup-id redshift-gtk
@@ -248,23 +275,18 @@ exec --no-startup-id pa-applet
 exec --no-startup-id parcellite
 exec --no-startup-id compton --config ~/.i3/compton.conf -b
 exec --no-startup-id xautolock -time 10 -locker "~/.i3/locker.sh"
-exec --no-startup-id "nylas mail"
-#exec "(?i)discord"
-exec "(?i)keybase"
 
-# Delete me
-bindsym $mod+Shift+x exec --no-startup-id termite --hold -e weechat
 
 # Launcher
 
-set $mode_launcher Launch: [d]iscord [n]ylas-mail [c]hrome [g]it
+set $mode_launcher Launch: [d]iscord [c]hrome [g]it [e]arlybird
 bindsym $mod+o mode "$mode_launcher"
 
 mode "$mode_launcher" {
-     bindsym d exec discord
-     bindsym e exec "nylas mail"
-     bindsym c exec "(?i)google-chrome"
-     bindsym g exec "(?i)gitkraken"
+     bindsym d exec --no-startup-id discord
+     bindsym e exec --no-startup-id Thunderbird
+     bindsym c exec --no-startup-id google-chrome
+     bindsym g exec --no-startup-id gitkraken
 
      bindsym Escape mode "default"
      bindsym Return mode "default"
@@ -312,6 +334,7 @@ mode "$mode_system" {
 # Gaps
 
 workspace $ws2 gaps inner 10
+workspace $ws3 gaps inner 10
 workspace $ws1 gaps inner 10
 workspace $ws4 gaps inner 10
 workspace $ws5 gaps inner 10
