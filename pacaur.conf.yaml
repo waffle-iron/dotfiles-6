@@ -3,9 +3,10 @@
   - gitkraken
   - zsh
   - i3-gaps
-  - atom-editor-bin
+  - atom-editor-bin --noedit --noconfirm
   - weechat-git
   - compton
   - redshift
   - i3blocks-gaps-git
   - i3status
+  -
