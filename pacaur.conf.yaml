@@ -3,8 +3,9 @@
   - gitkraken
   - zsh
   - i3-gaps
-  - atom-editor-bin
   - compton
   - redshift
   - i3blocks-gaps-git
   - i3status
+  - feh
+  - imagemagick
