@@ -5,7 +5,7 @@
 - shell:
   -
     description: "Bootstrap shell by carl0s"
-    command: "../.dotfiles/script/bootstrap"
+    command: "../.dotfiles/scripts/bootstrap"
     stdout: true
     stderr: true
     stdin: true
