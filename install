@@ -30,6 +30,7 @@ echo "" >> "$CONFIG"
 
 cat "${BASEDIR}/${CLEAN_CONFIG}" >> "$CONFIG"
 cat "${BASEDIR}/${LINK_CONFIG}" >> "$CONFIG"
+cat "${BASEDIR}/${SHELL_CONFIG}" >> "$CONFIG"
 
 if [[ "$OS" == "Darwin" ]]; then
   # macOS
@@ -45,7 +46,6 @@ else
   exit 1
 fi
 
-cat "${BASEDIR}/${SHELL_CONFIG}" >> "$CONFIG"
 
 "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${CONFIG}" \
   --plugin-dir "$PLUGIN_DIR" "${@}"
