@@ -1,7 +1,11 @@
 - shell:
   -
+    description: "Checking for updates"
+    command: "sudo pacman -Syyu"
+- shell:
+  -
     description: "Installing powerpill for faster downloads"
-    command: "sudo pacman -S --noconfirm powerpill"
+    command: "sudo pacman -Syy powerpill"
 - shell:
   -
     description: "Bootstrap shell by carl0s"

@@ -20,6 +20,9 @@ BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 OS=$(uname -s)
 
+# we need python for this script to even work with arch base
+sudo pacman -Syy python
+
 cd "${BASEDIR}"
 git submodule update --init --recursive "${DOTBOT_DIR}"
 git submodule update --init --recursive "${SHELLSETUP_DIR}"
