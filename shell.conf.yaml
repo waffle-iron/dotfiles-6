@@ -4,10 +4,6 @@
     command: "sudo pacman -Syyu"
 - shell:
   -
-    description: "Installing powerpill for faster downloads"
-    command: "sudo pacman -Syy powerpill"
-- shell:
-  -
     description: "Bootstrap shell by carl0s"
     command: "$HOME/.dotfiles/script/bootstrap"
     stdout: true
