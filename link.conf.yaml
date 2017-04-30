@@ -2,6 +2,7 @@
     ~/.dotfiles:         dotfiles-example/
     ~/.i3:         .i3/
     ~/.config:
+      create: true
       force: true
       path: config
     ~/scripts:         scripts/
