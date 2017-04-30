@@ -1,7 +1,7 @@
 - shell:
   -
     description: "Checking for updates"
-    command: "sudo pacman -Syyu"
+    command: "sudo pacman -Syu --noconfirm"
 - shell:
   -
     description: "Bootstrap shell by carl0s"
