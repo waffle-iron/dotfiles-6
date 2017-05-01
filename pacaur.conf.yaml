@@ -1,5 +1,6 @@
 - pacaur:
   - base-devel
+  - gtk3
   - ttf-hack
   - ttf-font-awesome
   - numix-gtk-theme
