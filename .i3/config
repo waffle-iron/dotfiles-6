@@ -239,7 +239,7 @@ bar {
     separator_symbol "■"
     bindsym button4 nop
     bindsym button5 nop
-    tray_output HDMI-0
+    tray_output none
     #tray_output none
     tray_padding 0
     height 34
@@ -260,7 +260,6 @@ bar {
 
 
 # Start background processes.
-exec /usr/lib/gnome-settings-daemon
 exec --no-startup-id nm-applet
 exec --no-startup-id gnome-keyring-daemon --start --components=pkcs11,secrets,ssh
 exec --no-startup-id redshift-gtk

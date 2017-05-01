@@ -1,7 +1,9 @@
 - pacaur:
+  - nm-applet
+  - dmenu
+  - pa-applet
+  - parcellite
   - visual-studio-code
-  - gitkraken
-  - zsh
   - i3-gaps
   - compton
   - redshift
