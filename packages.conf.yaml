@@ -1,8 +1,7 @@
 - yaourt:
-  - nm-applet
-  - dmenu
-  - pa-applet
-  - parcellite
+  - dmenu-git
+  - pa-applet-git
+  - clipit
   - visual-studio-code
   - i3-gaps
   - compton
