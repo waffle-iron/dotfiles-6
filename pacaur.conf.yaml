@@ -1,13 +1,15 @@
 - pacaur:
   - base-devel
+  - ttf-hack
   - ttf-font-awesome
+  - numix-gtk-theme
+  - adwaita-icon-theme
   - dmenu-git
   - pa-applet-git
   - clipit
   - visual-studio-code
   - i3-gaps
   - compton
-  - redshift
   - i3blocks-gaps-git
   - i3status
   - feh
