@@ -1,4 +1,6 @@
 - pacaur:
+  - base-devel
+  - ttf-font-awesome
   - dmenu-git
   - pa-applet-git
   - clipit
