@@ -1,4 +1,4 @@
-- yaourt:
+- pacaur:
   - dmenu-git
   - pa-applet-git
   - clipit
