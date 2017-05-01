@@ -7,6 +7,3 @@
 [submodule "dotbot-pacaur"]
 	path = dotbot-pacaur
 	url = https://github.com/insuusvenerati/dotbot-pacaur
-[submodule "dotbot-yaourt"]
-	path = dotbot-yaourt
-	url = https://github.com/insuusvenerati/dotbot-yaourt
