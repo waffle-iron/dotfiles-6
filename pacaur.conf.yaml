@@ -1,6 +1,7 @@
 - pacaur:
   - base-devel
   - spacefm-git
+  - lxappearance
   - gtk3
   - numix-gtk-theme
   - numix-circle-icon-theme-git
