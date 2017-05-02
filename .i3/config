@@ -150,8 +150,8 @@ set $ws8  "8:  "
 set $ws9  "9:  "
 set $ws10 "10:  "
 
-set $default_gaps_inner 0
-set $default_gaps_outer 0
+set $default_gaps_inner 5
+set $default_gaps_outer 5
 gaps inner $default_gaps_inner
 gaps outer $default_gaps_outer
 
