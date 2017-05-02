@@ -17,6 +17,8 @@
   - compton
   - i3blocks-gaps-git
   - i3status
+  - lightdm-webkit2-greeter
+  - lightdm-webkit2-theme-material2
   - feh
   - imagemagick
   - gnome-terminal
