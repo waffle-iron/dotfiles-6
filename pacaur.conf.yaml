@@ -1,6 +1,9 @@
 - pacaur:
   - base-devel
+  - spacefm-git
   - gtk3
+  - numix-gtk-theme
+  - numix-circle-icon-theme-git
   - ttf-hack
   - ttf-font-awesome
   - numix-gtk-theme
@@ -15,3 +18,4 @@
   - i3status
   - feh
   - imagemagick
+  - gnome-terminal
