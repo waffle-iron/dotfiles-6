@@ -7,7 +7,6 @@
 !/dotfiles-example
 !/dotbot
 !install
-!/config
 !/scripts
 !/dotbot-yaourt
 !*.conf.yaml
@@ -147,3 +146,11 @@ Templates
 Powerline_*.cache
 
 # Postgres stuff
+
+\.localrc
+
+config/spacefm/
+
+install\.conf\.yaml
+
+scripts/__pycache__/

@@ -11,8 +11,8 @@
 
 set $mod Mod4
 
-set_from_resource $darkred     color1  #000000
-set_from_resource $red         color9  #000000
+set_from_resource $darkred     color1  #800000
+set_from_resource $red         color9  #FF0000
 set_from_resource $darkgreen   color2  #000000
 set_from_resource $green       color10 #000000
 set_from_resource $darkyellow  color3  #000000
@@ -23,8 +23,8 @@ set_from_resource $darkmagenta color5  #000000
 set_from_resource $magenta     color13 #000000
 set_from_resource $darkcyan    color6  #000000
 set_from_resource $cyan        color14 #000000
-set_from_resource $darkwhite   color7  #000000
-set_from_resource $white       color15 #000000
+set_from_resource $darkwhite   color7  #ffffff
+set_from_resource $white       color15 #ffffff
 
 set $black       #282828
 set $darkblack   #1d2021
@@ -67,8 +67,16 @@ for_window [class="(?i)pavucontrol"] floating enable, move position mouse
 for_window [class="(?i)pavucontrol" instance="pavucontrol-bar"] move down $height px
 for_window [class="(?i)transmission-gtk"] floating enable
 
+
+# TESTING AREA
+
+
+
+# Default Layout
+workspace_layout tabbed
+
 # start a terminal
-bindsym $mod+Return exec termite -d $(xcwd)
+bindsym $mod+Return exec gnome-terminal
 
 focus_follows_mouse no
 
@@ -135,9 +143,6 @@ bindsym $mod+a focus parent
 bindsym $mod+g focus child
 
 # Set Workspaces
-#set $wp1 "1: Left"
-#set $wp2 "2: Main"
-#set $wp3 "3: Mail"
 
 set $ws1  "1:  "
 set $ws2  "2:  "
@@ -150,10 +155,18 @@ set $ws8  "8:  "
 set $ws9  "9:  "
 set $ws10 "10:  "
 
+# Setup gaps
+
 set $default_gaps_inner 5
 set $default_gaps_outer 5
 gaps inner $default_gaps_inner
 gaps outer $default_gaps_outer
+
+workspace $ws2 gaps inner 10
+workspace $ws3 gaps inner 10
+workspace $ws1 gaps inner 10
+workspace $ws4 gaps inner 10
+workspace $ws5 gaps inner 10
 
 # Multi Monitor
 
@@ -271,13 +284,13 @@ exec --no-startup-id xautolock -time 10 -locker "~/.i3/locker.sh"
 
 # Launcher
 
-set $mode_launcher Launch: [d]iscord [c]hrome [g]it [e]arlybird
+set $mode_launcher Launch: [d]iscord [f]irefox [g]it [e]mail
 bindsym $mod+o mode "$mode_launcher"
 
 mode "$mode_launcher" {
      bindsym d exec --no-startup-id discord
-     bindsym e exec --no-startup-id Thunderbird
-     bindsym c exec --no-startup-id google-chrome
+     bindsym e exec --no-startup-id evolution
+     bindsym f exec --no-startup-id firefox
      bindsym g exec --no-startup-id gitkraken
 
      bindsym Escape mode "default"
@@ -325,11 +338,7 @@ mode "$mode_system" {
 
 # Gaps
 
-workspace $ws2 gaps inner 10
-workspace $ws3 gaps inner 10
-workspace $ws1 gaps inner 10
-workspace $ws4 gaps inner 10
-workspace $ws5 gaps inner 10
+
 
 set $mode_gaps gaps
 set $mode_gaps_outer outer gaps
