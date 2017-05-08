@@ -13,5 +13,3 @@
 [submodule "arch-linux-anywhere"]
 	path = arch-linux-anywhere
 	url = https://github.com/insuusvenerati/arch-linux-anywhere
-[submodule "docs"]
-	url = https://github.com/insuusvenerati/space-jekyll-template
