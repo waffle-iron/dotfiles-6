@@ -10,7 +10,7 @@
 !/scripts
 !/dotbot-yaourt
 !*.conf.yaml
-
+!/docs
 # Don't include files with sensitive data
 /.zshrc-secrets
 
