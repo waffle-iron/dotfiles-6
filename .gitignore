@@ -10,7 +10,6 @@
 !/scripts
 !/dotbot-yaourt
 !*.conf.yaml
-!/docs
 # Don't include files with sensitive data
 /.zshrc-secrets
 
@@ -154,3 +153,7 @@ config/spacefm/
 install\.conf\.yaml
 
 scripts/__pycache__/
+
+config/gtk-3\.0/
+
+config/gtk-2\.0/
