@@ -22,3 +22,6 @@
   - feh
   - imagemagick
   - gnome-terminal
+  - dunst
+  - parcellite
+  - xautolock

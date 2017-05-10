@@ -253,6 +253,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 
+# Status bar
 bar {
     #verbose yes
     status_command i3blocks -c ~/.i3blocks.conf
@@ -284,6 +285,7 @@ bar {
 
 
 # Start background processes.
+exec --no-startup-id dunst -config ~/.i3/config_dunst
 exec --no-startup-id nm-applet
 exec --no-startup-id gnome-keyring-daemon --start --components=pkcs11,secrets,ssh
 exec --no-startup-id redshift-gtk
