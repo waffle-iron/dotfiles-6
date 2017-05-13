@@ -68,3 +68,11 @@ sudo nano /etc/lightdm/lightdm-webkit2-greeter.conf
 ## 7. Restart and enjoy
 
 ![alt](http://i.imgur.com/syKxRU2.png)
+
+Credits:
+@erikdubois
+@deadhead420
+Special thanks to @caarlos0 for the amazing shell tools
+@anishathalye for creating the install script to setup the dotfiles
+@ajlende
+
