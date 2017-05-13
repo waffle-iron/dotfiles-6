@@ -10,6 +10,7 @@
 !/scripts
 !/dotbot-yaourt
 !*.conf.yaml
+!equality_test.sh
 # Don't include files with sensitive data
 /.zshrc-secrets
 
