@@ -34,13 +34,14 @@ set $transparent #282828
 
 # Other Variables
 
+# Set monitor variables using xrandr output
 set $left DVI-I-1
 set $right HDMI-0
 
 set $mail evolution
 set $git gitkraken
 set $files spacefm
-set $browser firefox
+set $browser chromium
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -61,12 +62,15 @@ floating_modifier $mod
 # Start more windows floating.
 for_window [class="Thunderbird" title="Earlybird Preferences"] floating enable
 for_window [class="Thunderbird" title="New Event: New Event"] floating enable
+
+# For stuff that should always be floating
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="bubble"] floating enable
 for_window [window_role="task_dialog"] floating enable
 for_window [window_role="Preferences"] floating enable
 for_window [window_type="dialog"] floating enable
 for_window [window_type="menu"] floating enable
+
 for_window [class="(?i)gsimplecal"] floating enable, move position mouse, move down $height px
 for_window [class="(?i)qemu-system"] floating enable
 for_window [class="(?i)VirtualBox" title="(?i)Manager"] floating enable
@@ -90,7 +94,7 @@ workspace_layout tabbed
 # start a terminal
 bindsym $mod+Return exec gnome-terminal
 
-focus_follows_mouse no
+
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -178,15 +182,20 @@ gaps outer $default_gaps_outer
 
 ## Personal Settings - Change what you want
 
+# Change focus to the window you are mousing over
+focus_follows_mouse no
+
 # Multi Monitor
 
-workspace $ws1 output DVI-I-1
-workspace $ws2 output HDMI-0
-workspace $ws3 output HDMI-0
-workspace $ws4 output DVI-I-1
-workspace $ws5 output DVI-I-1
-workspace $ws6 output HDMI-0
+# Sets workspaces to be on a specific monitor
+workspace $ws1 output $left
+workspace $ws2 output $right
+workspace $ws3 output $right
+workspace $ws4 output $left
+workspace $ws5 output $left
+workspace $ws6 output $right
 
+# Sets apps to be on a specific workspace
 assign [class="(?i)discord" window_type="splash"] $ws1
 assign [class="(?i)discord" window_type="normal"] $ws1
 assign [class="(?i)gitkraken" window_type="splash"] $ws4
@@ -255,7 +264,7 @@ bindsym $mod+r mode "resize"
 
 # Status bar
 bar {
-    #verbose yes
+    #verbose yes - for troubleshooting
     status_command i3blocks -c ~/.i3blocks.conf
     i3bar_command i3bar -t
     position top
@@ -264,6 +273,7 @@ bar {
     separator_symbol "■"
     bindsym button4 nop
     bindsym button5 nop
+    #tray_output $left/$right/$middle - one for each monitor you want a system tray on
     tray_output none
     tray_output none
     tray_padding 0
@@ -302,6 +312,7 @@ exec gitkraken
 
 # Launcher
 
+# TODO better launcher and use variables
 set $mode_launcher Launch: [d]iscord [f]irefox [g]it [e]mail
 bindsym $mod+o mode "$mode_launcher"
 
@@ -332,14 +343,14 @@ bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
-# Screenshot
+# Screenshot - -r for specific window size
 bindsym $mod+Print exec xfce4-screenshooter -r
 
 
 # Power management
 set $Locker ~/.i3/locker.sh
-set $Docker ~/.i3/docker.sh
 
+# Shutdown menu
 set $mode_system System (l) lock, (e) logout, (s) suspend, (r) reboot, (Shift+s) shutdown, (d) dock
 mode "$mode_system" {
     bindsym l exec --no-startup-id $Locker, mode "default"
@@ -355,9 +366,6 @@ mode "$mode_system" {
 }
 
 # Gaps
-
-
-
 set $mode_gaps gaps
 set $mode_gaps_outer outer gaps
 set $mode_gaps_inner inner gaps
