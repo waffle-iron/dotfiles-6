@@ -13,6 +13,3 @@
 [submodule "arch-linux-anywhere"]
 	path = arch-linux-anywhere
 	url = https://github.com/insuusvenerati/arch-linux-anywhere
-[submodule "build"]
-	path = build
-	url = git@github.com:insuusvenerati/shell-ci-build.git
