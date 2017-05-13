@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 xrandr -q | grep -wv eDP1 | grep connected | \
-while read line; do
+while read -r line; do
     output=$(echo "$line" | awk -F' ' '{print $1}')
 
     connected=$(echo "$line" | grep -w "connected")
