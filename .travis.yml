@@ -1,7 +1,11 @@
 language: bash
-
-before_script:
-    - curl -L "http://downloads.sourceforge.net/shunit2/shunit2-2.0.3.tgz" | tar zx
-
+sudo: required
+os:
+  - linux
+  - osx
+install:
+  - ./build/install.sh
 script:
-    - bash equality_test.sh
+  - ./build/build.sh
+notifications:
+  email: false
