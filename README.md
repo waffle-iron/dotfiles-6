@@ -1,3 +1,7 @@
+[![Build Status](https://travis-ci.org/insuusvenerati/dotfiles.svg?branch=master)](https://travis-ci.org/insuusvenerati/dotfiles)  [![Say Thanks!](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/insuusvenerati)
+
+I prefer setting this up by installing Antergos and running the install script from a tty.
+
 # Setting up base install with custom ArchISO
 ---
  ## 1. Download ArchISO with git preinstalled
