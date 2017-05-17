@@ -92,7 +92,7 @@ for_window [class="(?i)transmission-gtk"] floating enable
 workspace_layout tabbed
 
 # start a terminal
-bindsym $mod+Return exec gnome-terminal
+bindsym $mod+Return exec termite
 
 
 
