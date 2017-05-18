@@ -2,6 +2,12 @@
 /[^.]*
 !/bin
 
+!config/
+config/*
+!config/spacefm/
+
+
+
 !/build
 !/git
 !/dotbot-pacaur
@@ -55,7 +61,7 @@
 /.cassandra
 /.CFUserTextEncoding
 /.chef
-/.config
+
 /.cookiecutters
 /.cups
 /.dbshell
