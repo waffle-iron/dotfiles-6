@@ -344,7 +344,7 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 # Screenshot - -r for specific window size
-bindsym $mod+Print exec xfce4-screenshooter -r
+bindsym $mod+Print exec --no-startup-id ~/.sharenix/sharenix-section.sh
 
 
 # Power management
