@@ -4,8 +4,7 @@
 
 !config/
 config/*
-!config/spacefm/
-
+!config/termite/
 
 
 !/build
