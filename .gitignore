@@ -156,8 +156,6 @@ Powerline_*.cache
 
 \.localrc
 
-config/spacefm/
-
 install\.conf\.yaml
 
 scripts/__pycache__/
