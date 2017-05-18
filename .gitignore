@@ -158,7 +158,3 @@ Powerline_*.cache
 install\.conf\.yaml
 
 scripts/__pycache__/
-
-config/gtk-3\.0/
-
-config/gtk-2\.0/
