@@ -1,6 +1,6 @@
 - pacaur:
   - base-devel
-  - spacefm-git
+  - spacefm
   - lxappearance
   - gtk3
   - numix-gtk-theme
