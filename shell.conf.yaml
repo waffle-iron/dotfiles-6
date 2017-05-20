@@ -9,3 +9,7 @@
     stdout: true
     stderr: true
     stdin: true
+- shell:
+  -
+    description: "Install OpenSSH for those that don't have it"
+    command: "sudo pacman -S openssh --noconfirm"
